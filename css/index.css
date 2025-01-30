@@ -1,0 +1,311 @@
+/*
+  index.css
+  KubeCity_Intro
+
+  Created by Js Na on 2025/01/31.
+  Copyright © 2025 Js Na, All rights reserved.
+*/
+
+@import url(./font.css);
+
+body {
+    animation: ShowBackground 4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+#KubeHeader {
+    width: 100%;
+    height: 4em;
+    box-sizing: border-box;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--HeaderBackground);
+    color: #ffffff;
+    backdrop-filter: blur(20px) saturate(180%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 56789;
+}
+
+#KubeHeader img {
+    max-height: 2.5em;
+    margin-right: 0.5em;
+}
+
+#KubeHeader h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+#KubeFooter {
+    height: 12em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #434343;
+    color: #ffffffCD;
+}
+
+#KubeFooter img {
+    height: 2.5em;
+    margin: 0.5em;
+    filter: grayscale(10);
+    opacity: 0.8;
+}
+
+#KubeFooter a {
+    color: #007aff;
+    text-decoration: none;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--PrimaryBackground);
+}
+
+.page h1.pageTitle {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--KubePink);
+    text-align: center;
+    transform: translateY(3rem) scale(0.9);
+    opacity: 0;
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page .pageContent {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2em;
+    opacity: 0;
+    transform: translateY(3rem) scale(0.9);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pageContent p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--PrimaryText);
+    text-align: center;
+    margin: 0.2em;
+}
+
+.pageImage {
+    aspect-ratio: 1;
+    max-height: 50vh;
+    max-width: 90vw;
+
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.page.appear h1.pageTitle {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.page.appear .pageContent {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+#MainBack {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#HelloKube {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#HelloKube h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--KubePink);
+    animation: HelloKubeTitle 4s cubic-bezier(0.22, 1, 0.36, 1);
+    margin: 0.5rem 0;
+}
+
+#HelloKube h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    animation: HelloKubeSubtitle 4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#HelloKube h3 .highlight {
+    animation: HelloKubeSubtitle_Highlight 4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.LinkContainer {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#MainLinkContainer.LinkContainer {
+    animation: HelloKubeTitle 4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link {
+    min-width: 8em;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    margin: 0.5rem 0.2rem 0 0.2rem;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    color: #000000;
+}
+
+.link.minelist {
+    background: #1c1c1e;
+    color: #92d050;
+}
+
+.link.minelist:hover {
+    background-color: #92d050;
+    color: #000000;
+}
+
+.link.minepage {
+    background: #1c1c1e;
+    color: #6fcf8a;
+}
+
+.link.minepage:hover {
+    background: #11d198;
+    color: #000000;
+}
+
+.link.discord {
+    background: #1c1c1e;
+    color: #5865f2;
+}
+
+.link.discord:hover {
+    background: #5865f2;
+    color: #000000;
+}
+
+.link.kube {
+    background: #1c1c1e;
+    color: var(--KubePink);
+}
+
+.link.kube:hover {
+    background: var(--KubePink);
+    color: #000000;
+}
+
+@keyframes ShowBackground {
+    0% {
+        background-color: #000000ff;
+    }
+
+    60% {
+        background-color: #000000ff;
+    }
+
+    100% {
+        background-color: #000000aa;
+    }
+}
+
+@keyframes HelloKubeTitle {
+    0% {
+        transform: translateY(100%);
+        filter: blur(8px);
+        opacity: 0;
+    }
+
+    60% {
+        transform: translateY(100%);
+        filter: blur(8px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes HelloKubeSubtitle {
+    0% {
+        transform: translateY(250%);
+        filter: blur(8px);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(250%);
+        filter: blur(8px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(100%);
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateY(100%);
+        filter: blur(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0%);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes HelloKubeSubtitle_Highlight {
+    0% {
+        color: var(--KubePink);
+    }
+
+    60% {
+        color: var(--KubePink);
+    }
+
+    100% {
+        color: #ffffff;
+    }
+}
