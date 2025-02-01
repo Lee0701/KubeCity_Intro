@@ -37,16 +37,7 @@ html, body {
     --HeaderBackground: linear-gradient(
         180deg,
         #ff809fff 0%,
-        #ff809fe7 10%,
-        #ff809fcf 20%,
-        #ff809fb7 30%,
-        #ff809f9f 40%,
-        #ff809f87 50%,
-        #ff809f6f 60%,
-        #ff809f57 70%,
-        #ff809f3f 80%,
-        #ff809f27 90%,
-        #ff809f10 100%
+        #00000000 100%
       );
     --link: #007aff;
     --blurBackground: rgba(255, 255, 255, .5);
