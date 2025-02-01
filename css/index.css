@@ -220,13 +220,23 @@ body {
     color: #000000;
 }
 
-.link.kube {
+.link.wiki {
     background: #1c1c1e;
     color: var(--KubePink);
 }
 
-.link.kube:hover {
+.link.wiki:hover {
     background: var(--KubePink);
+    color: #000000;
+}
+
+.link.map {
+    background: #1c1c1e;
+    color: #f06464;
+}
+
+.link.map:hover {
+    background: #f06464;
     color: #000000;
 }
 
